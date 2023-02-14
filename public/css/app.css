@@ -1,0 +1,2039 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+/*Fonte de customização*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Gerais */
+
+    section{
+        padding: 56px 0;
+    }
+
+    body{
+        font-family:'Roboto', sans-serif;
+    }
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .row{
+        margin: auto;
+    }
+
+    p, li {
+        color: #444;
+        font-size: 14px;
+    }
+
+
+
+/* Barra de navegacao */
+    header, .navbar {
+        background-color: #7fab7c;
+    }
+
+    .navbar-brand {
+        padding: 0;
+        color: #FFF;
+    }
+
+    .navbar-brand:hover {
+        color: #FFF;
+    }
+
+    .navbar-links a{
+        color: #FFF;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 10rem .8rem;
+    }
+
+    .navbar-toggler{
+        color: rgb(177, 241, 197);
+    }
+
+
+
+
+
+/*Login*/
+
+/*Muda a posição e dimensões do container*/
+.container-login {
+   
+    width: 35%;
+    top: 56%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+/*Muda a posição da logo no login*/    
+
+.logo-login{
+
+    width: auto;
+    top: -50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+
+}
+
+/*Muda a posição do SOCÃES&GATOS no login*/ 
+
+.socaesegatos-login-title{
+    
+    color: #FFF;
+    width: 35%;
+    top: -35%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+/*Muda a posição do "Tem conta?" no login*/ 
+
+.temconta-title{
+
+    width: 35%;
+    top: -17%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+
+
+
+/*Altera a distancia do container pra o topo da pagina */
+.ftco-section {
+    padding: 7em 0; 
+}
+
+/*Escrita socaesegatos*/  
+.heading-section {
+    font-size: 28px;
+    color: #fff; 
+}
+
+/*Deixa a imagem cobrindo todo o site*/
+.img {
+    background-size: cover;
+}
+
+
+
+/*Escrita de baixo do cadastre-se*/
+.login-wrap h3 {
+    font-weight: 300;
+    color: #fff; 
+}
+
+/*Alinha os textos do formulário no centro e os icones de esconder senha e checkbox*/
+.form-group {
+    position: relative;
+    text-align: center; 
+    margin-bottom: 2rem;
+}
+
+
+ /*Icone de esconder a senha*/
+ .field-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.9); 
+}
+
+/*Estiliza o formulario*/
+.form-control-login {
+    background: transparent;
+    height: 50px;
+    color: white !important;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+/*Estiliza os campos de input do formulario*/
+.form-control-login::-webkit-input-placeholder, .form-control-login:hover, .form-control-login:focus {
+    /* Chrome/Opera/Safari */
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8) !important; 
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/*Cursor fica em forma de ponteiro em cima da checkbox*/
+.checkbox-wrap{
+    cursor: pointer;
+}
+
+/* Esconde a checkbox padrao do browser */
+.checkbox-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Cria uma checkbox personalizada */
+.checkmark{
+    
+position: absolute;
+top: 5px;
+left: 25.5%;
+}
+
+/* Cria uma checkbox para que ela fique visivel quando nao e marcada*/
+.checkmark:after {
+    content: "\f0c8";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    margin-top: -4px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; 
+}
+
+/* Mostra o cehck quando a caixa e marcada */
+.checkbox-wrap input:checked ~ .checkmark:after {
+    display: block;
+    content: "\f14a";
+    font-family: "FontAwesome";
+    color: rgba(0, 0, 0, 0.2); 
+}
+
+/* Muda cor do lembrar de mim*/
+.checkbox-primary {
+    color: #fbceb5; 
+}
+
+.checkbox-primary:hover{
+    color: #7fab7c; 
+}
+
+    
+.checkbox-primary input:checked ~ .checkmark:after {
+    color: #fbceb5;   
+}
+
+/*Deixa o cursor em formato de ponteiro em cima do botao de login*/
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn:hover{
+    color: rgb(152, 202, 137); 
+    font-size: 1.05em;
+    
+}
+
+/*Altera o fundo do botao de login*/
+.form-control-login.btn.btn-primary.submit.px-3 {
+    background: #fbceb5;
+    border: 1px solid #fbceb5;
+    color: #000 !important; 
+}
+
+.form-control-login.btn.btn-primary.submit.px-3:hover {
+
+    transform: scale(1.05); 
+    background-color: #7fab7c;
+    border: #7fab7c;
+    color: #fff !important;
+    
+}
+
+
+
+.cadastrese-login {
+
+    text-decoration: none;
+    color: #fbceb5; 
+    
+}
+
+.cadastrese-login:hover{
+  
+    color: rgb(152, 202, 137); 
+    font-size: 1.05em;
+   
+}
+
+.ou {
+   
+    color: #fff; 
+}
+.ou:hover{
+   
+    color: #fff; 
+}
+
+.cadastrong-login {
+    text-decoration: none;
+    color: #fbceb5; 
+}
+
+.cadastrong-login:hover{
+   
+    color: rgb(152, 202, 137); 
+    font-size: 1.05em;
+   
+}
+
+.btn btn-link{
+    text-decoration: none;
+}
+
+
+/* Cadastro */
+
+    /* Containers do Cadastro */
+    .container-cad {
+        width: 80%;
+        height: auto;
+        max-height: 750px;
+        display: flex;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+        overflow: auto;
+        min-width: 500px;
+    }
+
+    /*Imagem do formulario do Cadastro*/
+    .form-image {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 1rem;
+    }
+
+    .form-image img {
+        width: 40rem;
+        background-color: transparent;
+    }
+
+    /*Fomrulario do Cadastro */
+    .form-cad {
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 1rem 8rem;
+        color: white !important;
+        border-radius: 0px;
+      
+    }
+
+    /*Estilo do fieldset */
+    #msform-cad {
+        margin:50px auto;
+        text-align-last: center;
+        position: relative;
+    }
+
+
+  .fieldset {
+    min-width: 0px;
+    padding: 79px;
+    margin: 0;
+    border: 0;
+        }
+      
+
+    /*Inputs de texto e numero*/
+    #msform-cad input, #msform-cad textarea {
+        padding: 5px;
+        border: 1px solid #7fab7c;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+    }
+
+    /*Inputs de select*/
+    #select-cidadeong {
+        padding: 3px;
+        border: 1px solid #7fab7c;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+    }
+
+    /*Botäo*/
+    #msform-cad .action-button {
+        width: 100px;
+        background: #7fab7c;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 10px;
+        margin: 10px 5px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    #msform-cad .action-button:hover, #msform-cad .action-button:focus {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+    }
+
+    /*Titulo do fieldset*/
+    .fs-title-cad {
+        font-size: 15px;
+	    text-transform: uppercase;
+	    color: #5c7e5a;
+	    margin-bottom: 10px;
+    }
+
+    /*Labels do input*/
+    .labels-user {
+        font-size: 15px;
+	    text-transform: uppercase;
+	    color: #317a55;
+       
+        display: block;
+        text-align: center;
+    }
+
+    /*Inputs do fieldset*/
+    .input-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+
+    /*Caixa de input*/
+    .input-box {
+        text-align: center;
+        display: flex ;
+        flex-direction: column;
+        margin-bottom: 1.1rem;
+        
+    }
+
+    /*input da caixa de input*/
+    .input-box select input {
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+        font-size: 0.8rem;
+    }
+
+    .input-box input:hover select:hover{
+        background-color: #eeeeee75;
+    }
+
+    .input-box input:focus-visible {
+        outline: 1px solid #fbceb5;
+    }
+
+    .input-box input::placeholder {
+        color: #000000be;
+    }
+    .select-estados{
+        padding: 6px;
+        margin-top: 10px;
+        border: 1px solid #7fab7c;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+
+    }
+    .select-estados select input {
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+        font-size: 0.8rem;
+    }
+
+    .select-estadosinput:hover select:hover{
+        background-color: #eeeeee75;
+    }
+
+    .select-estados input:focus-visible {
+        outline: 1px solid #fbceb5;
+    }
+    .select-estados input::placeholder {
+        color: #000000be;
+    }
+
+    /*Botao do form*/
+
+    .cadastro-btn{
+        width: 25%;
+        height: 35px;
+        font: inherit;
+        margin: 0px;
+        color: #fff;
+        background: #7fab7c;
+        border: none;
+        border-radius: 25px;
+        transition: all .2s ease;
+        outline: none;
+        font-weight: px;
+        box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    }
+    
+      .cadastro-btn:hover {
+        background: #628660;
+        color: #ffffff;
+        transition: all .2s ease;
+        cursor: pointer;
+      }
+
+/* Home */
+
+    /* Containers */
+    .container {
+        padding: 30px 0;
+    }
+
+    /*Barra de pesquisa*/
+    .search-bar {
+       position: absolute;
+        background-color: #ffffff;
+        font-size: 16px;
+        width: 59%;
+        height: 4%;
+        border: 2px solid #7fab7c;
+        top:100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .botaozin{
+        position: absolute;
+        background-color: #7fab7c;
+        color: #fff;
+        top: 98%;
+        height: 4%;
+        width: 10%;
+        text-align: center;
+        left: 80%;
+        border: none;
+        font-size: 15px;
+    }
+
+    .botaozin:hover{
+        background-color: #628660;
+    }
+
+    .main-btn{
+        text-decoration: none;
+    }
+
+     /*Titulo Achados home*/
+
+     .achados-home {
+        
+        color: #444;
+        font-size: 40px;
+        position: relative;
+        top: 108.1%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: 3px 2px #bbb;
+        }
+    
+        /*Traço depois do Achados home*/
+    
+        .achados-home::after{
+    
+            
+        content: "";
+        position: absolute;
+        bottom: -35%;
+        left: 48%;
+        right: 48%;
+        height: 5px;
+        background-color: #7fab7c;
+        
+        
+          }
+
+    /*Titulo  Peridos home*/
+
+
+    .perdidos-home{
+        color: #444;
+    font-size: 40px;
+    position: relative;
+    top: 171%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 3px 2px #bbb; 
+    }
+
+    /*Traço depois do Peridos home*/
+
+    .perdidos-home::after{
+
+        
+    content: "";
+    position: absolute;
+    bottom: -35%;
+    left: 48%;
+    right: 48%;
+    height: 5px;
+    background-color: #7fab7c;
+ 
+    
+      }
+    /*Titulo SOCÃES&GATOS home*/
+
+    .sobrenos-home{
+       
+        color: #444;
+        font-size: 40px;
+        position: relative;
+        top: -24%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: 3px 2px #bbb;
+        }
+    
+        /*Traço depois do SOCÃES&GATOS home*/
+    
+    
+        .sobrenos-home::after{
+    
+           
+        
+            content: "";
+            position: absolute;
+            bottom: -35%;
+            left: 47%;
+            right: 47%;
+            height: 5px;
+            background-color: #7fab7c;
+     
+        
+          }
+
+    /* Slider achados e perdidos */
+    .slick-slider{
+        position: relative;
+
+        display: block;
+        box-sizing: border-box;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+            touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .slick-list{
+        position: relative;
+
+        display:block;
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .slick-list:focus{
+        outline: none;
+    }
+
+    .slick-list.dragging{
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .slick-track{
+        position: relative;
+        top: 0s;
+        left: 0;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slick-track:before,
+    .slick-track:after {
+        display: table;
+        content: '';
+    }
+    .slick-track:after{
+        clear: both;
+    }
+
+    .slick-loading .slick-track {
+        visibility: hidden;
+    }
+
+    .slick-slide {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+
+    [dir='rtl'] .slick-slide {
+        float: right;
+    }
+
+    .slick-slide img {
+        display: block;
+    }
+
+    .slick-slide.slick-loading img {
+        display: none;
+    }
+
+    .slick-slide.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized .slick-slide {
+        display: block;
+    }
+
+    .slick-loading .slick-slide {
+        visibility: hidden;
+    }
+
+    .slick-vertical .slick-slide {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+
+    /*Imagens do slider achados e perdidos*/
+    .slider{
+        padding-bottom: 40px;
+    }
+
+    .team{
+        text-align: center;
+        border: .5px solid #ddd;
+        background: #fff;
+        margin: 15px;
+        box-shadow: 10px 10px 20px #bbb;
+        border-radius: 50px;
+    }
+
+    .team img{
+        padding-bottom: 10px;
+        border-radius: 50px;
+        height: 300px;
+        width: 500px;
+        align-items: center;
+    }
+
+    .team h5{
+        color: #7fab7c;
+        padding: 5px 0px;
+    }
+
+    .team p{
+        color: #000;
+        font-size: 14px;
+    }
+
+    /*Botoes slider achados e peridos*/
+    .left_arrow {
+        position: absolute;
+        top: 32%;
+        left: -30px;
+        font-size: 25px;
+        height: 45px;
+        width: 55px;
+        background:#5f945b ;
+        color: rgb(253, 253, 253);
+        border-radius: 25%;
+        z-index: 99;
+        text-align: center;
+        line-height: 1.7;
+        border: 9px solid#5f945b ;
+    }
+
+    .left_arrow:hover{
+        background: #7fab7c ;
+        border-color: #7fab7c;
+
+    }
+
+    .right_arrow{
+        position: absolute;
+        top: 32%;
+        right: -30px;
+        font-size: 25px;
+        height: 45px;
+        width: 55px;
+        background:#5f945b ;
+        color: #fff;
+        border-radius: 25%;
+        z-index: 99;
+        text-align: center;
+        line-height: 1.7;
+        border: 9px solid#5f945b ;
+    }
+
+    .right_arrow:hover{
+        background: #7fab7c ;
+        border-color: #7fab7c;
+    }
+
+    .container-fluid{
+        padding: 0;
+    }
+
+    #mainSlider .carousel-inner, #mainSlider .carousel-inner, #maiSlider .carousel-item{
+        height: 90vh;
+    }
+
+    #mainSlider .carousel-caption{
+        top: 30%;
+    }
+
+    /*Titulo da letra maior do carrosel achados e perdidos*/
+    #mainSlider .carousel-caption h2{
+        font-size: 50px;
+        margin-bottom: 30px;
+        text-shadow: 4px 2px rgb(75, 75, 75);
+    }
+
+    /*Titulo da letra menor do carrosel achados e perdidos*/
+    #mainSlider .carousel-caption p{
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 100px;
+        color: #FFF;
+        text-shadow: 1px 2px #000;
+    }
+
+    /*Css do botao do carrosel achados e perdidos*/
+    .main-btn {
+        background-color: #7fab7c;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        border-radius: 30px;
+        transition: .3s;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .main-btn:hover{
+        text-decoration: none;
+        color: #FFF;
+        background-color: #698e67;
+    }
+
+    .caroousel-indicators .active{
+        background-color: #7fab7c;
+    }
+
+    /*Sobre socaesegatos*/
+    #about-area{
+        background-color: #FFF;
+    }
+
+    #about-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    #about-list li{
+        line-height: 30px;
+    }
+
+    #about-list i{
+        color: #6bc564;
+        margin-right: 15px;
+    }
+
+    .about-tittle{
+        color: #444;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    /*Titulo Nosso Time home*/
+
+    .nossotime-home{
+        color: #444;
+        margin: 0 0 65px 0;
+        font-size: 40px; 
+        text-align: center;
+        text-shadow: 3px 2px #bbb;  
+        position: relative;
+        
+    }
+
+/*Traço depois do Nosso Time home*/
+    
+    .nossotime-home::after{
+
+        content: "";
+        position: absolute;
+        bottom: -35%;
+        left: 48%;
+        right: 48%;
+        height: 5px;
+        background-color: #7fab7c;
+        
+      }
+
+    /* Card*/
+    a, a:hover, a:focus {
+        color: inherit;
+    }
+
+    .profile-card-2 {
+        max-width: 300px;
+        background-color: #FFF;
+        box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.1);
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .profile-card-2 img {
+        transition: all linear 0.25s;
+        height: 600px;
+    }
+
+    .profile-card-2 .profile-name {
+        position: absolute;
+        left: 30px;
+        bottom: 70px;
+        font-size: 30px;
+        color: #FFF;
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+        transition: all linear 0.25s;
+    }
+
+    .profile-card-2 .profile-icons {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        color: #FFF;
+        transition: all linear 0.25s;
+    }
+
+    .profile-card-2 .profile-username {
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        color: #FFF;
+        font-size: 13px;
+        transition: all linear 0.25s;
+    }
+
+    .profile-card-2 .profile-icons .fa {
+        margin: 5px;
+    }
+
+    .profile-card-2:hover img {
+        filter: grayscale(100%);
+    }
+
+    .profile-card-2:hover .profile-name {
+        bottom: 80px;
+    }
+
+    .profile-card-2:hover .profile-username {
+        bottom: 60px;
+    }
+
+    .profile-card-2:hover .profile-icons {
+        right: 40px;
+    }
+
+
+
+
+
+/* Post */
+
+    /*Achado*/
+    .main-title-p {
+       
+        color: #444;
+        font-size: 40px;
+        position: relative;
+        top: 75px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: 3px 2px #bbb;
+        }
+    
+        .main-title-p::after{
+    
+            content: "";
+        position: absolute;
+        bottom: -35%;
+        left: 48%;
+        right: 48%;
+        height: 5px;
+        background-color: #7fab7c;
+    
+          }
+      
+        /*Reset básico*/
+        * {margin: 0; padding: 0;}
+    
+        /*Estilo dos formulário*/
+        .msform-post {
+            width: 600px;
+            /* margin: 50px auto; */
+            text-align-last: center;
+            position: relative;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            top: 58%;
+        }
+    
+        /*Imagem que sobrepõe o fromulario 1*/
+        #imagem-dogcatsob1 {
+            position:  absolute;
+            pointer-events: none;
+            top: 200px;
+            right: -265px;
+            width: 1070px ;
+        }
+      
+        /*Imagem que sobrepõe o fromulario 2*/
+        #imagem-dogcatsob2 {
+            position:  absolute; 
+            pointer-events: none;
+            top: -280px; 
+            right: -295px;
+            width: 1070px ;
+        }
+      
+        /*Imagem que sobrepõe o fromulario 3*/
+        #imagem-dogcatsob3 {
+            position:  absolute; 
+            pointer-events: none;
+            top: -150px; 
+            right: -265px;
+            width: 1070px ;
+        }
+        
+        #msform-post fieldset {
+            background:white;
+            border: 0 none;
+            border-radius: 3px;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            width: 80%;
+            margin: 0 10%;
+            position: absolute;
+            top: 250%;
+           
+        }
+    #msform-post style{
+        position: relative;
+    }
+     
+        /*Exibe um formulário por vez*/
+        #msform-post fieldset:not(:first-of-type) {
+            display: none;
+        }
+    
+        /*Inputs de texto e numero*/
+        #msform-post input, #msform-post textarea {
+            padding: 15px;
+            border: 1px solid #7fab7c;
+            border-radius: 3px;
+            margin-bottom: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: montserrat;
+            color: #2C3E50;
+            font-size: 13px;
+        }
+    
+        /*Inputs de select*/
+        #select-input {	
+            padding: 15px;
+            border: 1px solid #7fab7c;
+            border-radius: 3px;
+            margin-bottom: 50px;
+            margin-top: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: montserrat;
+            color: #2C3E50;
+            font-size: 13px;
+        }
+    
+        /*Botões*/
+        #msform-post .action-button {
+            width: 100px;
+            background: #7fab7c;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 1px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 10px 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    
+        #msform-post .action-button:hover, 
+        #msform-post .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+        }
+    
+        /*Cabeçarios dos fieldsets*/
+        .fs-title-post {
+            font-size: 15px;
+            text-transform: uppercase;
+            color: #5c7e5a;
+            margin-bottom: 10px;
+        }
+        
+        .fs-subtitle-post {
+            font-weight: normal;
+            font-size: 13px;
+            color: #5c7e5a;
+            margin-bottom: 20px;
+        }
+    
+        /*Barra de progresso*/
+        #progressbar {
+            
+        
+            margin-top: 25%;
+            overflow: hidden;
+            counter-reset: step;
+            position: relative;
+            
+        }
+    
+        #progressbar li {
+            list-style-type: none;
+            color: #7fab7c;
+            text-transform: uppercase;
+            font-size: 9px;
+            width: 33.33%;
+            float: left;
+            position: relative;
+        }
+    
+        #progressbar li:before {
+            content: counter(step);
+            counter-increment: step;
+            width: 20px;
+            line-height: 20px;
+            display: block;
+            font-size: 10px;
+            color: #333;
+            background: white;
+            border-radius: 3px;
+            margin: 0 auto 5px auto;
+        }
+    
+        /*Conectores da barra de progressão*/
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: -50%;
+            top: 9px;
+            z-index: -1; /*Coloca a barra atras dos números*/
+        }
+    
+        #progressbar li:first-child:after {
+            /*Esconde o conector do 1 conector*/
+            content: none; 
+        }
+    
+        #progressbar li.active:before,  #progressbar li.active:after{
+            background: #7fab7c;
+            color: white;
+        }
+    
+        /*Parte do upload da foto*/
+        .file-upload {
+            background-color: #ffffff;
+            width: auto ;
+              margin: 50px auto;
+          
+            position: relative;
+        }
+          
+        .file-upload-btn {
+            width: auto;
+            margin: 0;
+            color: #fff;
+            background: #7fab7c;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            border-bottom: 4px solid #7fab7c;
+            transition: all .2s ease;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+          
+        .file-upload-btn:hover {
+            background: #628660;
+            color: #ffffff;
+            transition: all .2s ease;
+            cursor: pointer;
+        }
+          
+        .file-upload-btn:active {
+            border: 0;
+            transition: all .2s ease;
+        }
+          
+        .file-upload-content {
+            display: none;
+            text-align: center;
+        }
+          
+        .file-upload-input {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            opacity: 0;
+            cursor: pointer;
+        }
+          
+        .image-upload-wrap {
+            margin-top: 20px;
+            border: 4px dashed #7fab7c;
+            position: relative;
+        }
+          
+        .image-dropping,
+        .image-upload-wrap:hover {
+            background-color: #7fab7c;
+            border: 4px dashed #ffffff;
+        }
+          
+        .image-title-wrap {
+            padding: 0 15px 15px 15px;
+            color: #222;
+        }
+          
+        .drag-text {
+            text-align: center;
+        }
+          
+        .drag-text h3 {
+            font-weight: 100;
+            text-transform: uppercase;
+            color: #317a55;
+            padding: 60px 0;
+        }
+          
+        .file-upload-image {
+            max-height: 200px;
+            max-width: 200px;
+            margin: auto;
+            padding: 20px;
+        }
+          
+        .remove-image {
+            width: auto;
+            margin: 0;
+            color: #fff;
+            background: #cd4535;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            border-bottom: 4px solid #b02818;
+            transition: all .2s ease;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+          
+        .remove-image:hover {
+            background: #c13b2a;
+            color: #ffffff;
+            transition: all .2s ease;
+            cursor: pointer;
+        }
+          
+        .remove-image:active {
+            border: 0;
+            transition: all .2s ease;
+        }
+    
+    /* Postagem/Cadastro Certo */
+
+    /*Estilo dos formulário*/
+    #msform-post-certo {
+        width: 80% ;
+        height: 40%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        right: -20%;
+        text-align-last: center;
+        position: relative;
+    }
+
+    .sucesso{
+        margin-top: 25%;
+    }
+
+    /*Imagem que sobrepõe o formulário*/
+    #imagem-catdog {
+        position:  absolute;
+        pointer-events: none;
+        top: -410px;
+        right: 35px;
+    }
+
+    #msform-post-certo fieldset {
+        background:white;
+        border: 0 none;
+        border-radius: 3px;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        padding: 20px 30px;
+        box-sizing: border-box;
+        width: 80%;
+        position: relative;
+    }
+
+    /*Botões*/
+    #msform-post-certo .action-button {
+        width: 200px;
+        background: #7fab7c;
+        font-weight: bold;
+        color: white;
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 15px;
+        margin: 10px 5px;
+    text-decoration: none;
+    font-size: 15px;
+    }
+
+    .main-title-post-certo {
+        color: #5c7e5a;
+        margin: 0 0 65px 0;
+        font-size: 40px;
+        text-align: center;
+    }
+
+
+
+
+
+/*Galeria achados e perdidos*/
+
+    /*Titulo da galeria achados*/
+    .achados-main-title{
+        color: #444;
+        font-size: 40px;
+        position: absolute;
+        top:15.1%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: 3px 2px #bbb;
+    }
+
+    /*Traço debaixo do Achados*/
+    .achados-main-title::after{
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: 30%;
+        right: 30%;
+        height: 5px;
+        background-color: #7fab7c;
+    }
+
+    /*Container achados*/
+    .gallery-container1 {
+        height: 50%;
+        width: 54%;
+        overflow-y: scroll;
+        position: absolute;
+        top: 66%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 3%;
+        box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.4);
+      }
+
+    /*Css da imagem do gato da direta em achados*/
+    .gatotrascontainer img{
+        width: 30%;
+        left: 67.15%;
+        top: 42%;
+        position: absolute;
+        max-width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+
+    /*Css da imagem do cachorro da esquerda em achados*/
+    .dogplaconteiner img{
+        width: 25%;
+        right: 75.4%;
+        top: 40%;
+        position: absolute;
+        max-width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /*Css da imagem do do cachorro e do gato em cima em achados*/
+    .dogemcimacontainer img{
+        width: 50%;
+        left: 26%;
+        top: 11.7%;
+        position: absolute;
+        max-height: 100%;
+        z-index: 1;
+        pointer-events: none;
+        height: calc(43%);
+    }
+
+    /*Muda o tamanho das fotos dentro do container achados*/
+    .gallery-container1 img {
+        height: 30%;
+        width: 19%;
+        padding: 1%;
+        border-radius: 15%;
+        cursor: pointer;
+    }
+
+    /*Resposavel por animar a imagem quando voce coloca o cursor em cima dela*/
+    .gallery-container1 img:hover {
+        filter: grayscale(100%);
+        transform: scale(1.1);
+    }
+
+    /*Titulo da galeria perdidos*/
+    .perdidos-main-title{
+        color: #444;
+        font-size: 40px;
+        position: absolute;
+        top:100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: 3px 2px #bbb;
+    }
+
+    /*Traço debaixo do perdidos*/
+
+    .perdidos-main-title::after{
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: 30%;
+        right: 30%;
+        height: 5px;
+        background-color: #7fab7c;
+    }
+
+
+    /*Container perdidos*/
+    .gallery-container2 {
+        height: 50%;
+        width: 55%;
+        overflow-y: scroll;
+        position: absolute;
+        top: 155.75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 3%;
+        box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    /*Css do gato da esuqerda em perdidos*/
+    .gatoleria2 img{
+        width: 30%;
+        right:54.63%;
+        top: 108%;
+        position: absolute;
+        max-width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /*Css do cachorro da direita em perdidos*/
+    .cachorroapoio img{
+        width: 30%;
+        left: 64.5%;
+        top: 121%;
+        position: absolute;
+        max-width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /*Css do cachorro e do gato de cima em perdidos*/
+    .dogcatplactudum img{
+
+        width: 55%;
+        left: 22%;
+        top: 105.2%;
+        position: absolute;
+        max-height: 100%;
+        z-index: 1;
+        pointer-events: none;
+        height: calc(65%);
+    }
+
+    /*Muda o tamanho das fotos dentro do container perdidos*/
+    .gallery-container2 img {
+        height: 30%;
+        width: 19%;
+        padding: 1%;
+        border-radius: 15%;
+        cursor: pointer;
+    }
+
+    /*Resposavel por animar a imagem quando voce coloca o cursor em cima dela*/
+    .gallery-container2 img:hover {
+        filter: grayscale(100%);
+        transform: scale(1.15);
+    }
+
+
+
+
+
+/*Perfil*/
+
+.fieldset-perfilong{
+
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
+    border-radius: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding: 25px;
+}
+
+.perfilong{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    top: 52%;
+}
+
+.input-box-perfil input {
+    margin: 1rem 0;
+    padding: 0rem 4.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    margin-bottom: 2%;
+}
+
+.btn-salvar-dados{
+    width: auto;
+    font: inherit;
+    margin: 0;
+    color: #fff;
+    background: #7fab7c;
+    border: none;
+    padding: 9px;
+    border-radius: 10px;
+    border-bottom: 4px solid #7fab7c;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn-salvar-dados:hover {
+    background: #628660;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+/*Meus posts*/
+
+    .meusposts-main-title{
+        color: #444;
+        font-size: 40px;
+        position: absolute;
+        top:15.1%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: 3px 2px #bbb;
+    }
+
+    /*Traço debaixo do Achados*/
+    .meusposts-main-title::after{
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: 30%;
+        right: 30%;
+        height: 5px;
+        background-color: #7fab7c;
+    }
+
+    /*Container achados*/
+    .meusposts-container {
+        height: 46%;
+        width: 46%;
+        overflow-y: scroll;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 3%;
+        box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    /*Muda o tamanho das fotos dentro do container achados*/
+    .meusposts-container img {
+        height: 30%;
+        width: 19%;
+        padding: 1%;
+        border-radius: 15%;
+        cursor: pointer;
+    }
+
+    /*Resposavel por animar a imagem quando voce coloca o cursor em cima dela*/
+    .meusposts-container img:hover {
+        filter: grayscale(100%);
+        transform: scale(1.1);
+    }
+
+    /*Css do cachorro da direita em perdidos*/
+    .gatoparede img{
+        width: 41%;
+        left: 59%;
+        top: 26%;
+        position: absolute;
+        max-width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .cachorroparede img{
+        width: 43%;
+        right: 58%;
+        top: 27%;
+        position: absolute;
+        max-width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .perfis{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        top: 50%;
+    }
+
+    .input-box input {
+        margin: 0.6rem 0;
+        padding: 0rem 8.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+        font-size: 0.8rem;
+        margin-bottom: 2%;
+    }
+
+    /* ------------------------------- */
+    /* Post Individual
+    ---------------------------------- */
+    .author a{
+        font-family: 'Rokkitt', serif;
+        font-size: 16px;
+        color: #00C4CF;
+    }
+
+    .author p{
+        font-family: 'Rokkitt', serif;
+        font-size: 16px;
+        color: #8d8d8d;
+    }
+
+    .conti{
+        top: 70%;
+        width: 100%;
+        border-radius: 30%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .verpost-header{
+        padding-top: 2%;
+        padding-bottom: 1%;
+        text-align: center;
+        background-color: #7fab7c;
+        color: #FFF;
+        font-weight: 300;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .conti-card{
+        top: 50%;
+        width: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.4);
+        border-radius: 15px;
+    }
+
+    .cardverpost-body{
+        padding-top: 5%;
+        font-weight: inherit;
+        padding-left: 5%;
+        padding-bottom: 5%;
+    }
+
+    .verpost-footer{
+        position: relative;
+        left: 95%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .verpost-btn{
+        width: auto;
+        font: inherit;
+        margin: 0;
+        color: #fff;
+        background: #7fab7c;
+        border: none;
+        padding: 7px;
+        border-radius: 6px;
+        border-bottom: 4px solid #7fab7c;
+        transition: all .2s ease;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+
+
+    }
+
+
+
+
+
+    /* Redefinir Senha */
+    .form-cadredef {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 50px;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    /*Estilo do fieldset */
+    #msform-cadredef {
+        width: 600px ;
+        margin: 50px auto;
+        text-align-last: center;
+        position: relative;
+
+
+    }
+
+    #msform-cadredef fieldset {
+        background:white;
+        border: 0 none;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        top: -140px;
+        width: 80%;
+        margin: 0 10%;
+        position: relative;
+        padding: 1rem;
+        border-radius: 50px;
+
+    }
+
+    /*Inputs de texto e numero*/
+    #msform-cadredef input, #msform-cadredef textarea {
+        padding: 10px;
+        border: 1px solid #7fab7c;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+        border-radius: 50px;
+
+    }
+
+    /*Botäo*/
+    #msform-cadredef .action-button {
+        width: 100px;
+        background: #7fab7c;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 10px;
+
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 10px;
+        font-weight: 500;
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+        margin-bottom: 25px;
+        position: relative;
+
+    }
+
+    #msform-cadredef .action-button:hover, #msform-cadredef .action-button:focus {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+    }
+
+    #msform-cadredef h6{
+
+
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+
+
+
+
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+#section {
+    padding: 6px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}

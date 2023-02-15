@@ -94,11 +94,34 @@
         Hero
         =============================================== -->
         <div class="conti">
+            @php
+                use App\Models\FoundImage;
+            @endphp
             <div class="conti-card">
                 <div class="verpost-header">
                     <strong>{{$post->name_Animal}}</strong>
                 </div>
-                <img src="{{asset($post->img_Animal)}}" class="card-img-top" alt="Imagem de Capa">
+                <div class="slider">
+                    <div class="container">
+                      <div class="slick_slide-individual">
+
+                        @php
+                            {{$img = FoundImage::where([['id_Achado', 'like', $post->id]])->get();}}
+                        @endphp
+                        @foreach ($img as $img)
+
+                            <div class="col-3">
+                                <img src="{{asset($img->name_Img)}}" alt="" class="img-fluid">
+                            <a href="#"></a>
+                            </div>
+                        @endforeach
+
+
+
+
+                      </div>
+                    </div>
+                  </div>
                 <div class="cardverpost-body">
                     <strong>Animal: </strong>{{$post->type_Animal}}<br>
                     <strong>Raça: </strong>{{$post->breed_Animal}}<br>
@@ -175,14 +198,14 @@
     <!--Parallax-->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
-    <script src="js/slick.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{asset('js/custom.js')}}"></script>
 
 <!--Rodapé da pagina-->
 <div style="
 width: 100%;
 left: 50%;
-top: 143%;
+top: 193%;
 transform: translate(-50%, -50%);
 position: absolute;">
     <footer class="bg-light text-center text-white">

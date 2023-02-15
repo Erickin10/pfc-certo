@@ -8,3 +8,14 @@ $('.slick_slide').slick({
     prevArrow:'<i class="fas fa-angle-left  left_arrow"></i>',
     nextArrow:'<i class="fas fa-angle-right  right_arrow"></i>',
   });
+
+  $('.slick_slide-individual').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+    dots:false,
+    speed: 800,
+	autoplaySpeed: 2000,
+    prevArrow:'<i class="fas fa-angle-left  left_arrow"></i>',
+    nextArrow:'<i class="fas fa-angle-right  right_arrow"></i>',
+  });

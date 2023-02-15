@@ -1787,6 +1787,7 @@ left: 25.5%;
         position: absolute;
         box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.4);
         border-radius: 15px;
+        margin-top: 11%;
     }
 
     .cardverpost-body{
@@ -2327,3 +2328,42 @@ footer{
 .card-foto-post .drag-area-foto.dragover .visible-foto-post {
 	display: none;
 }
+
+/* Slider achados e perdidos */
+.slick_slide-individual{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .slick_slide-individual .slick-track,
+  .slick_slide-individual .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slick_slide-individual img{
+    height: 441px;
+    width: -webkit-fill-available;
+    position: relative;
+    clear: both;
+    max-height: 500px;
+    padding: 10%;
+    border-radius: 20%;
+
+  }

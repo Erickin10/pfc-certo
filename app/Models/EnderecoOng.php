@@ -17,15 +17,16 @@ class EnderecoOng extends Model {
         'complemento',
         'numero',
         'estado',
+        'id_Ong'
     ];
 
     /*public function usuarios(){
         return $this->hasOne(Ong::class);
     }*/
 
-    public static function catchIdEndereco($data)
+    /*public static function catchIdEndereco($data)
     {
         $id_Endereco = DB::table('endereco_ongs')->insertGetId($data);
         return $id_Endereco;
-    }
+    }*/
 }

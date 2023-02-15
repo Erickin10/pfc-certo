@@ -67,8 +67,8 @@ class PerfilController extends Controller
 
         $endereco = EnderecoUser::findOrFail($enderecoUser_id);
         $endereco->update([
-            'cep' => $request->input('cep'),
-            'rua' => $request->input('rua'),
+            'cep' => $request->cep,
+            'rua' => $request->rua,
             'bairro' => $request->bairro,
             'cidade' => $request->cidade,
             'complemento' => $request->complemento,
@@ -79,10 +79,7 @@ class PerfilController extends Controller
 
         $user = User::findOrFail($request->userId);
 
-
         //$user=User::where('id_Endereco', 'like', $id_Endereco);
-
-
 
         $user->update([
             'name' => $request['name'],
@@ -93,6 +90,10 @@ class PerfilController extends Controller
 
         return view('site.perfil');
     }
+
+
+
+
 
     /**
      * Remove the specified resource from storage.

@@ -17,16 +17,17 @@ class EnderecoUser extends Model {
         'estado',
         'complemento',
         'numero',
+        'id_Usuario'
     ];
 
-    public function usuarios(){
-        return $this->hasMany(User::class);
-    }
+    /*public function usuarios(){
+        return $this->hasOne(User::class);
+    }*/
 
-    public static function catchIdEndereco($data)
+    /*public static function catchIdEndereco($data)
     {
         $id_Endereco = DB::table('endereco_users')->insertGetId($data);
         return $id_Endereco;
-    }
+    }*/
 
 }

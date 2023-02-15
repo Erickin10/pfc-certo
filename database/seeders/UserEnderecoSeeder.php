@@ -15,15 +15,6 @@ class UserEnderecoSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\EnderecoUser::factory()->create([
-            'estado' => 'Admin-estado',
-            'cidade' => 'Admin-cidade',
-            'bairro' => 'Admin-bairro',
-            'rua' => 'Admin-rua',
-            'complemento' => 'Admin-complemento',
-            'numero' => '1010',
-            'cep' => 'Admin-cep',
-        ]);
 
     }
 }

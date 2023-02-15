@@ -53,7 +53,16 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+
+            'cep' => ['required', 'string', 'max:9'],
+            'rua' => ['required', 'string', 'max:255'],
+            'bairro' => ['required', 'string', 'max:255'],
+            'cidade' => ['required', 'string', 'max:255'],
+            'complemento' => ['required', 'string', 'max:255'],
+            'numero' => ['required', 'integer'],
+            'estado' => ['required', 'string', 'max:255']
         ]);
     }
 
@@ -66,6 +75,32 @@ class RegisterController extends Controller
     protected function create(array $request){
 
         $data = [
+            'name' => $request['name'],
+            'phone' => $request['phone'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'role' => 'cliente'
+        ];
+
+        $user = User::create($data);
+        $id_Usuario = $user->getKey();
+
+        $data2 = [
+            'cep' => $request['cep'],
+            'rua' => $request['rua'],
+            'bairro' => $request['bairro'],
+            'cidade' => $request['cidade'],
+            'estado' => $request['estado'],
+            'complemento' => $request['complemento'],
+            'numero' => $request['numero'],
+            'id_Usuario' => $id_Usuario
+        ];
+
+        EnderecoUser::create($data2);
+
+        return ($user);
+
+        /*$data = [
             'cep' => $request['cep'],
             'rua' => $request['rua'],
             'bairro' => $request['bairro'],
@@ -88,7 +123,7 @@ class RegisterController extends Controller
             'role' => 'cliente'
         ];
 
-        return User::create($data2);;
+        return User::create($data2);*/
 
     }
 

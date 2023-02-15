@@ -65,34 +65,33 @@
     <!-- Fieldset 2 -->
     <fieldset >
 
-      <h2 class="fs-title-post">Passo 2</h2>
-      <h3 class="fs-subtitle-post">Nos mostre o bichinho</h3>
+<h2 class="fs-title-post">Passo 2</h2>
+<h3 class="fs-subtitle-post">Nos mostre o bichinho</h3>
 
-      <div class="file-upload">
+<div class="card-foto-post">
 
-        <img src="imagens/dogcatsob.png" alt="cachorro" id="imagem-dogcatsob2">
+<img src="imagens/dogcatsob.png" alt="cachorro" id="imagem-dogcatsob2">
+    	<div class="top-foto-foto">
 
-        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">
-          Adicionar imagem
-        </button>
-        <div class="image-upload-wrap">
-          <input class="file-upload-input" name="img_Animal" type="file" multiple onchange="readURL(this);" accept="image/*" />
-          <div class="drag-text">
-            <h3>Solte a imagem aqui </h3>
-          </div>
-        </div>
+    		<button type="button">Upload</button>
 
-        <div class="file-upload-content">
-          <img class="file-upload-image" src="#" alt="your image" />
-          <div class="image-title-wrap">
-            <button type="button" onclick="removeUpload()" class="remove-image">
-              Remover
-              <span class="image-title">o upload da imagem</span>
-            </button>
-          </div>
-        </div>
+    	</div>
+    	<div class="drag-area-foto">
 
-      </div>
+    		<span class="visible-foto-post">
+				Solte as imagens aqui ou
+				<span class="select-fotopost" role="button" >Busque</span>
+			</span>
+			<span class="on-drop-fotopost">Solte as imagens aqui</span>
+      <input name="img_Animal[]" type="file" class="file-fotopost" multiple="multiple" />
+    	</div>
+
+	    <!-- IMAGE PREVIEW CONTAINER -->
+    	<div class="container"></div>
+    </div>
+
+    <script src="{{asset('app.js')}}"></script>
+
 
       <input type="button" name="previous" class="previous action-button" value="Anterior" />
       <input type="button" name="next" class="next action-button" value="Próximo" />
@@ -105,12 +104,12 @@
     <h2 class="fs-title-post">Passo 3</h2>
       <h3 class="fs-subtitle-post">Nos conte outros detalhes</h3>
       <img src="imagens/dogcatsob.png" alt="cachorro" id="imagem-dogcatsob3">
-      <label class="labels-user" for="inputElement">Endereço:</label>
+     <label class="labels-user" for="inputElement">Local:</label>
       <input type="text" name="local_Found_Animal" placeholder="Onde ele foi achado?" />
       <label class="labels-user" for="inputElement">Observações (contato):</label>
       <input type="text" name="post_Description" placeholder="Observações + Informaçoes para contato" />
-      <label class="labels-user" for="inputElement">Local:</label>
-      <input type="text" name="local_Animal" placeholder="Onde o animal se encontra?" />
+      <label class="labels-user" for="inputElement">Endereço:</label>
+      <input type="text" name="local_Animal" placeholder="Endereço de onde ele foi visto" />
       <input type="hidden" name="id_Usuario" value="{{Auth::user()->id}}"/>
       <input type="hidden" name="type_Post" value="achado">
 
@@ -135,5 +134,5 @@
 <script src="js/progessbar.min.js"></script>
 
 <script src="js/postar.js"></script>
-
+<script src="js/app.js"></script>
 @endsection

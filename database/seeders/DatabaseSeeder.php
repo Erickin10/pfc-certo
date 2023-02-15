@@ -28,7 +28,6 @@ class DatabaseSeeder extends Seeder
             'role' => 'adm',
             'password' => Hash::make('adminsocaesegatos'),
             'phone' => '(45)99999-9999',
-            'id_Endereco' => '1'
         ]);
     }
 }

@@ -104,14 +104,16 @@
     <button class="botaozin rounded" type="submit">Procurar</button>
 
     </form>
-    
+
 
 
   <br><br>
 
   <!-- Achados -->
   <div id="about-area">
-
+    @php
+        use App\Models\FoundImage;
+    @endphp
     <div class="container">
       <div class="col-12"><br>
 
@@ -125,17 +127,26 @@
         <div class="row slick_slide">
 
             @foreach ($postsAchado as $post)
+            @if($post->aproved == true)
+
             <div class="col-3">
                 <div class="team">
 
+                    @php
+                        {{$img = FoundImage::where([['id_Achado', 'like', $post->id]])->first();}}
+                    @endphp
+
                     <a href="{{route('site.galeria.achado.post-individual', ['post' => $post])}}">
-                        <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}" class="img-fluid">
+                        <img src="{{asset($img->name_Img)}}" alt="{{asset($img->name_Img)}}" class="img-fluid">
                     </a>
+
                     <h5>{{$post->name_Animal}}</h5>
                     <p>{{$post->breed_Animal}}</p>
 
                 </div>
             </div>
+
+            @endif
             @endforeach
 
         </div>
@@ -146,7 +157,9 @@
 
   <!-- Perdidos -->
   <div id="about-area">
-
+    @php
+    use App\Models\LostImage;
+    @endphp
     <div class="container">
       <div class="col-12"><br>
 
@@ -160,17 +173,24 @@
         <div class="row slick_slide">
 
             @foreach ($postsPerdido as $post)
+            @if ($post->aproved == true)
+
             <div class="col-3">
                 <div class="team">
 
+                    @php
+                        {{$img = LostImage::where([['id_Perdido', 'like', $post->id]])->first();}}
+                    @endphp
                     <a href="{{route('site.galeria.perdido.post-individual', ['post' => $post])}}">
-                        <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}" class="img-fluid">
+                        <img src="{{asset($img->name_Img)}}" alt="{{asset($img->name_Img)}}" class="img-fluid">
                     </a>
                     <h5>{{$post->name_Animal}}</h5>
                     <p>{{$post->breed_Animal}}</p>
 
                 </div>
             </div>
+
+            @endif
             @endforeach
 
         </div>
@@ -331,5 +351,62 @@
 
 <script src="js/slick.min.js"></script>
 <script src="js/custom.js"></script>
+
+<div>
+            <footer class="bg-light text-center text-white" style="color: #0082ca">
+
+            <!-- Sites-->
+            <div class="text-center p-3" style="background-color: #7fab7cc4">
+                <section id="section" class="mb-4">
+
+                <!-- Facebook -->
+                <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #3b5998;"
+                    href="https://www.facebook.com/profile.php?id=100089471120038"
+                    role="button"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- Google -->
+                <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #dd4b39;"
+                    href="#!"
+                    role="button"
+                >
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #ac2bac;"
+                    href="https://www.instagram.com/socaes.gatos/"
+                    role="button"
+                    >
+                    <i class="fab fa-instagram"></i>
+                    </a>
+
+                <!-- Linkedin -->
+                <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #0082ca;"
+                    href="#!"
+                    role="button"
+                >
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                </section>
+
+                <!-- Copyright -->
+                © 2023 Copyright:
+                <a class="text-white" href="home.html">SOCÃES&GATOS</a>
+            </div>
+            </footer>
+        </div>
+        </html>
 
 @endsection

@@ -65,7 +65,7 @@
 
 /*Muda a posição e dimensões do container*/
 .container-login {
-   
+
     width: 35%;
     top: 56%;
     position: absolute;
@@ -75,40 +75,40 @@
 
 }
 
-/*Muda a posição da logo no login*/    
+/*Muda a posição da logo no login*/
 
 .logo-login{
 
     width: auto;
-    top: -50%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
-
-}
-
-/*Muda a posição do SOCÃES&GATOS no login*/ 
-
-.socaesegatos-login-title{
-    
-    color: #FFF;
-    width: 35%;
     top: -35%;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 
+
 }
 
-/*Muda a posição do "Tem conta?" no login*/ 
+/*Muda a posição do SOCÃES&GATOS no login*/
+
+.socaesegatos-login-title{
+
+    color: #FFF;
+    width: 35%;
+    top: -20%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+/*Muda a posição do "Tem conta?" no login*/
 
 .temconta-title{
 
     width: 35%;
-    top: -17%;
+    top: -10%;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -121,13 +121,13 @@
 
 /*Altera a distancia do container pra o topo da pagina */
 .ftco-section {
-    padding: 7em 0; 
+    padding: 7em 0;
 }
 
-/*Escrita socaesegatos*/  
+/*Escrita socaesegatos*/
 .heading-section {
     font-size: 28px;
-    color: #fff; 
+    color: #fff;
 }
 
 /*Deixa a imagem cobrindo todo o site*/
@@ -140,13 +140,13 @@
 /*Escrita de baixo do cadastre-se*/
 .login-wrap h3 {
     font-weight: 300;
-    color: #fff; 
+    color: #fff;
 }
 
 /*Alinha os textos do formulário no centro e os icones de esconder senha e checkbox*/
 .form-group {
     position: relative;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 2rem;
 }
 
@@ -159,7 +159,7 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.9); 
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /*Estiliza o formulario*/
@@ -178,7 +178,7 @@
 .form-control-login::-webkit-input-placeholder, .form-control-login:hover, .form-control-login:focus {
     /* Chrome/Opera/Safari */
     text-align: center;
-    color: rgba(255, 255, 255, 0.8) !important; 
+    color: rgba(255, 255, 255, 0.8) !important;
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -202,7 +202,7 @@
 
 /* Cria uma checkbox personalizada */
 .checkmark{
-    
+
 position: absolute;
 top: 5px;
 left: 25.5%;
@@ -218,7 +218,7 @@ left: 25.5%;
     margin-top: -4px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
-    transition: 0.3s; 
+    transition: 0.3s;
 }
 
 /* Mostra o cehck quando a caixa e marcada */
@@ -226,21 +226,21 @@ left: 25.5%;
     display: block;
     content: "\f14a";
     font-family: "FontAwesome";
-    color: rgba(0, 0, 0, 0.2); 
+    color: rgba(0, 0, 0, 0.2);
 }
 
 /* Muda cor do lembrar de mim*/
 .checkbox-primary {
-    color: #fbceb5; 
+    color: #fbceb5;
 }
 
 .checkbox-primary:hover{
-    color: #7fab7c; 
+    color: #7fab7c;
 }
 
-    
+
 .checkbox-primary input:checked ~ .checkmark:after {
-    color: #fbceb5;   
+    color: #fbceb5;
 }
 
 /*Deixa o cursor em formato de ponteiro em cima do botao de login*/
@@ -251,25 +251,25 @@ left: 25.5%;
 }
 
 .btn:hover{
-    color: rgb(152, 202, 137); 
+    color: rgb(152, 202, 137);
     font-size: 1.05em;
-    
+
 }
 
 /*Altera o fundo do botao de login*/
 .form-control-login.btn.btn-primary.submit.px-3 {
     background: #fbceb5;
     border: 1px solid #fbceb5;
-    color: #000 !important; 
+    color: #000 !important;
 }
 
 .form-control-login.btn.btn-primary.submit.px-3:hover {
 
-    transform: scale(1.05); 
+    transform: scale(1.05);
     background-color: #7fab7c;
     border: #7fab7c;
     color: #fff !important;
-    
+
 }
 
 
@@ -277,36 +277,36 @@ left: 25.5%;
 .cadastrese-login {
 
     text-decoration: none;
-    color: #fbceb5; 
-    
+    color: #fbceb5;
+
 }
 
 .cadastrese-login:hover{
-  
-    color: rgb(152, 202, 137); 
+
+    color: rgb(152, 202, 137);
     font-size: 1.05em;
-   
+
 }
 
 .ou {
-   
-    color: #fff; 
+
+    color: #fff;
 }
 .ou:hover{
-   
-    color: #fff; 
+
+    color: #fff;
 }
 
 .cadastrong-login {
     text-decoration: none;
-    color: #fbceb5; 
+    color: #fbceb5;
 }
 
 .cadastrong-login:hover{
-   
-    color: rgb(152, 202, 137); 
+
+    color: rgb(152, 202, 137);
     font-size: 1.05em;
-   
+
 }
 
 .btn btn-link{
@@ -319,12 +319,12 @@ left: 25.5%;
     /* Containers do Cadastro */
     .container-cad {
         width: 80%;
-        height: auto;
+        height: 80%;
         max-height: 750px;
         display: flex;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+        box-shadow: 5px 5px 10px rgb(0 0 0 / 21%);
         overflow: auto;
-        min-width: 500px;
+        margin: 5%;
     }
 
     /*Imagem do formulario do Cadastro*/
@@ -335,16 +335,20 @@ left: 25.5%;
         align-items: center;
         background-color: transparent;
         padding: 1rem;
+
     }
 
     .form-image img {
-        width: 40rem;
+        width: auto;
         background-color: transparent;
+        position: fixed;
+
     }
 
     /*Fomrulario do Cadastro */
     .form-cad {
         width: 50%;
+        height: fit-content;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -352,7 +356,7 @@ left: 25.5%;
         padding: 1rem 8rem;
         color: white !important;
         border-radius: 0px;
-      
+
     }
 
     /*Estilo do fieldset */
@@ -369,7 +373,7 @@ left: 25.5%;
     margin: 0;
     border: 0;
         }
-      
+
 
     /*Inputs de texto e numero*/
     #msform-cad input, #msform-cad textarea {
@@ -430,16 +434,16 @@ left: 25.5%;
         font-size: 15px;
 	    text-transform: uppercase;
 	    color: #317a55;
-       
+
         display: block;
         text-align: center;
     }
 
     /*Inputs do fieldset*/
     .input-group {
-        display: flex;
+        display: inline-table;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding: 1rem 0;
     }
 
@@ -449,7 +453,7 @@ left: 25.5%;
         display: flex ;
         flex-direction: column;
         margin-bottom: 1.1rem;
-        
+
     }
 
     /*input da caixa de input*/
@@ -508,8 +512,9 @@ left: 25.5%;
     /*Botao do form*/
 
     .cadastro-btn{
-        width: 25%;
-        height: 35px;
+        padding: 5px;
+        width: auto;
+        height: auto;
         font: inherit;
         margin: 0px;
         color: #fff;
@@ -521,7 +526,7 @@ left: 25.5%;
         font-weight: px;
         box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
     }
-    
+
       .cadastro-btn:hover {
         background: #628660;
         color: #ffffff;
@@ -574,7 +579,7 @@ left: 25.5%;
      /*Titulo Achados home*/
 
      .achados-home {
-        
+
         color: #444;
         font-size: 40px;
         position: relative;
@@ -584,12 +589,12 @@ left: 25.5%;
         text-align: center;
         text-shadow: 3px 2px #bbb;
         }
-    
+
         /*Traço depois do Achados home*/
-    
+
         .achados-home::after{
-    
-            
+
+
         content: "";
         position: absolute;
         bottom: -35%;
@@ -597,8 +602,8 @@ left: 25.5%;
         right: 48%;
         height: 5px;
         background-color: #7fab7c;
-        
-        
+
+
           }
 
     /*Titulo  Peridos home*/
@@ -612,14 +617,14 @@ left: 25.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    text-shadow: 3px 2px #bbb; 
+    text-shadow: 3px 2px #bbb;
     }
 
     /*Traço depois do Peridos home*/
 
     .perdidos-home::after{
 
-        
+
     content: "";
     position: absolute;
     bottom: -35%;
@@ -627,13 +632,13 @@ left: 25.5%;
     right: 48%;
     height: 5px;
     background-color: #7fab7c;
- 
-    
+
+
       }
     /*Titulo SOCÃES&GATOS home*/
 
     .sobrenos-home{
-       
+
         color: #444;
         font-size: 40px;
         position: relative;
@@ -643,14 +648,14 @@ left: 25.5%;
         text-align: center;
         text-shadow: 3px 2px #bbb;
         }
-    
+
         /*Traço depois do SOCÃES&GATOS home*/
-    
-    
+
+
         .sobrenos-home::after{
-    
-           
-        
+
+
+
             content: "";
             position: absolute;
             bottom: -35%;
@@ -658,8 +663,8 @@ left: 25.5%;
             right: 47%;
             height: 5px;
             background-color: #7fab7c;
-     
-        
+
+
           }
 
     /* Slider achados e perdidos */
@@ -932,15 +937,15 @@ left: 25.5%;
     .nossotime-home{
         color: #444;
         margin: 0 0 65px 0;
-        font-size: 40px; 
+        font-size: 40px;
         text-align: center;
-        text-shadow: 3px 2px #bbb;  
+        text-shadow: 3px 2px #bbb;
         position: relative;
-        
+
     }
 
 /*Traço depois do Nosso Time home*/
-    
+
     .nossotime-home::after{
 
         content: "";
@@ -950,7 +955,7 @@ left: 25.5%;
         right: 48%;
         height: 5px;
         background-color: #7fab7c;
-        
+
       }
 
     /* Card*/
@@ -1031,7 +1036,7 @@ left: 25.5%;
 
     /*Achado*/
     .main-title-p {
-       
+
         color: #444;
         font-size: 40px;
         position: relative;
@@ -1041,9 +1046,9 @@ left: 25.5%;
         text-align: center;
         text-shadow: 3px 2px #bbb;
         }
-    
+
         .main-title-p::after{
-    
+
             content: "";
         position: absolute;
         bottom: -35%;
@@ -1051,12 +1056,12 @@ left: 25.5%;
         right: 48%;
         height: 5px;
         background-color: #7fab7c;
-    
+
           }
-      
+
         /*Reset básico*/
         * {margin: 0; padding: 0;}
-    
+
         /*Estilo dos formulário*/
         .msform-post {
             width: 600px;
@@ -1067,7 +1072,7 @@ left: 25.5%;
             transform: translate(-50%, -50%);
             top: 58%;
         }
-    
+
         /*Imagem que sobrepõe o fromulario 1*/
         #imagem-dogcatsob1 {
             position:  absolute;
@@ -1076,25 +1081,25 @@ left: 25.5%;
             right: -265px;
             width: 1070px ;
         }
-      
+
         /*Imagem que sobrepõe o fromulario 2*/
         #imagem-dogcatsob2 {
-            position:  absolute; 
+            position:  absolute;
             pointer-events: none;
-            top: -280px; 
-            right: -295px;
+            top: -171px;
+            right: -264px;
             width: 1070px ;
         }
-      
+
         /*Imagem que sobrepõe o fromulario 3*/
         #imagem-dogcatsob3 {
-            position:  absolute; 
+            position:  absolute;
             pointer-events: none;
-            top: -150px; 
+            top: -150px;
             right: -265px;
             width: 1070px ;
         }
-        
+
         #msform-post fieldset {
             background:white;
             border: 0 none;
@@ -1106,17 +1111,17 @@ left: 25.5%;
             margin: 0 10%;
             position: absolute;
             top: 250%;
-           
+
         }
     #msform-post style{
         position: relative;
     }
-     
+
         /*Exibe um formulário por vez*/
         #msform-post fieldset:not(:first-of-type) {
             display: none;
         }
-    
+
         /*Inputs de texto e numero*/
         #msform-post input, #msform-post textarea {
             padding: 15px;
@@ -1129,9 +1134,9 @@ left: 25.5%;
             color: #2C3E50;
             font-size: 13px;
         }
-    
+
         /*Inputs de select*/
-        #select-input {	
+        #select-input {
             padding: 15px;
             border: 1px solid #7fab7c;
             border-radius: 3px;
@@ -1143,7 +1148,7 @@ left: 25.5%;
             color: #2C3E50;
             font-size: 13px;
         }
-    
+
         /*Botões*/
         #msform-post .action-button {
             width: 100px;
@@ -1158,12 +1163,12 @@ left: 25.5%;
             text-decoration: none;
             font-size: 14px;
         }
-    
-        #msform-post .action-button:hover, 
+
+        #msform-post .action-button:hover,
         #msform-post .action-button:focus {
             box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
         }
-    
+
         /*Cabeçarios dos fieldsets*/
         .fs-title-post {
             font-size: 15px;
@@ -1171,25 +1176,25 @@ left: 25.5%;
             color: #5c7e5a;
             margin-bottom: 10px;
         }
-        
+
         .fs-subtitle-post {
             font-weight: normal;
             font-size: 13px;
             color: #5c7e5a;
             margin-bottom: 20px;
         }
-    
+
         /*Barra de progresso*/
         #progressbar {
-            
-        
+
+
             margin-top: 25%;
             overflow: hidden;
             counter-reset: step;
             position: relative;
-            
+
         }
-    
+
         #progressbar li {
             list-style-type: none;
             color: #7fab7c;
@@ -1199,7 +1204,7 @@ left: 25.5%;
             float: left;
             position: relative;
         }
-    
+
         #progressbar li:before {
             content: counter(step);
             counter-increment: step;
@@ -1212,7 +1217,7 @@ left: 25.5%;
             border-radius: 3px;
             margin: 0 auto 5px auto;
         }
-    
+
         /*Conectores da barra de progressão*/
         #progressbar li:after {
             content: '';
@@ -1224,26 +1229,26 @@ left: 25.5%;
             top: 9px;
             z-index: -1; /*Coloca a barra atras dos números*/
         }
-    
+
         #progressbar li:first-child:after {
             /*Esconde o conector do 1 conector*/
-            content: none; 
+            content: none;
         }
-    
+
         #progressbar li.active:before,  #progressbar li.active:after{
             background: #7fab7c;
             color: white;
         }
-    
+
         /*Parte do upload da foto*/
         .file-upload {
             background-color: #ffffff;
             width: auto ;
               margin: 50px auto;
-          
+
             position: relative;
         }
-          
+
         .file-upload-btn {
             width: auto;
             margin: 0;
@@ -1258,24 +1263,24 @@ left: 25.5%;
             text-transform: uppercase;
             font-weight: 700;
         }
-          
+
         .file-upload-btn:hover {
             background: #628660;
             color: #ffffff;
             transition: all .2s ease;
             cursor: pointer;
         }
-          
+
         .file-upload-btn:active {
             border: 0;
             transition: all .2s ease;
         }
-          
+
         .file-upload-content {
             display: none;
             text-align: center;
         }
-          
+
         .file-upload-input {
             position: absolute;
             margin: 0;
@@ -1286,42 +1291,42 @@ left: 25.5%;
             opacity: 0;
             cursor: pointer;
         }
-          
+
         .image-upload-wrap {
             margin-top: 20px;
             border: 4px dashed #7fab7c;
             position: relative;
         }
-          
+
         .image-dropping,
         .image-upload-wrap:hover {
             background-color: #7fab7c;
             border: 4px dashed #ffffff;
         }
-          
+
         .image-title-wrap {
             padding: 0 15px 15px 15px;
             color: #222;
         }
-          
+
         .drag-text {
             text-align: center;
         }
-          
+
         .drag-text h3 {
             font-weight: 100;
             text-transform: uppercase;
             color: #317a55;
             padding: 60px 0;
         }
-          
+
         .file-upload-image {
             max-height: 200px;
             max-width: 200px;
             margin: auto;
             padding: 20px;
         }
-          
+
         .remove-image {
             width: auto;
             margin: 0;
@@ -1336,19 +1341,19 @@ left: 25.5%;
             text-transform: uppercase;
             font-weight: 700;
         }
-          
+
         .remove-image:hover {
             background: #c13b2a;
             color: #ffffff;
             transition: all .2s ease;
             cursor: pointer;
         }
-          
+
         .remove-image:active {
             border: 0;
             transition: all .2s ease;
         }
-    
+
     /* Postagem/Cadastro Certo */
 
     /*Estilo dos formulário*/
@@ -1601,6 +1606,8 @@ left: 25.5%;
     padding-top: 5%;
     padding-bottom: 5%;
     padding: 25px;
+    margin-top: 60%;
+    margin-bottom: 10%;
 }
 
 .perfilong{
@@ -2036,4 +2043,287 @@ section .section-title {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #7fab7c;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+    clear: both;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #7fab7c;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.footer-perdido{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #7fab7c;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+    clear: both;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #7fab7c;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap');
+
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN STYLE */
+
+.card-foto-post {
+    width: 400px;
+    height: auto;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+    background: #FFF;
+}
+
+.card-foto-post .top-foto-post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card-foto-post p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #878a9a;
+}
+
+.card-foto-post button {
+    outline: 0;
+    border: 0;
+        -webkit-appearence: none;
+	background: #7fab7c;
+	color: #fff;
+	border-radius: 4px;
+	transition: 0.3s;
+	cursor: pointer;
+	font-weight: 400;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	font-size: 0.8rem;
+	padding: 8px 13px;
+}
+
+.card-foto-post button:hover {
+	opacity: 0.8;
+}
+
+.card-foto-post button:active {
+	transform: translateY(5px);
+}
+
+.card-foto-post .drag-area-foto {
+	width: 100%;
+	height: 160px;
+	border-radius: 5px;
+	border: 2px dashed #d5d5e1;
+	color: #c8c9dd;
+	font-size: 0.9rem;
+	font-weight: 500;
+	position: relative;
+	background: #dfe3f259;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	-webkit-user-select: none;
+	margin-top: 10px;
+}
+
+.card-foto-post .drag-area-foto .visible-foto-post {
+	font-size: 18px;
+}
+.card-foto-post .select-fotopost {
+    color: #7fab7c;
+	margin-left: 5px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.card-foto-post .select-fotopost:hover {
+	opacity: 0.6;
+}
+
+.card-foto-post .container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	max-height: 200px;
+	overflow-y: auto;
+	margin-top: 10px;
+}
+
+.card-foto-post .container .image {
+	width: calc(26% - 19px);
+	margin-right: 15px;
+	height: 75px;
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.card-foto-post .container .image img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.card-foto-post .container .image span {
+	position: absolute;
+	top: -2px;
+	right: 9px;
+	font-size: 20px;
+	cursor: pointer;
+    color: #b02818;
+}
+
+/* dragover class will used in drag and drop system */
+.card-foto-post .drag-area-foto.dragover {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.card-foto-post .drag-area-foto.dragover .on-drop-fotopost {
+	display: inline;
+	font-size: 28px;
+}
+
+.card-foto-post input,
+.card-foto-post .drag-area-foto .on-drop-fotopost,
+.card-foto-post .drag-area-foto.dragover .visible-foto-post {
+	display: none;
 }

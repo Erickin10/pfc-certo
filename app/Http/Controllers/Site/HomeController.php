@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\FoundAnimal;
+use App\Models\FoundImage;
 use App\Models\LostAnimal;
+use App\Models\LostImage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,7 +18,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('site.home', ['postsAchado'=>FoundAnimal::all()], ['postsPerdido'=>LostAnimal::all()]);
+        return view('site.home', ['postsAchado'=>FoundAnimal::all()], ['postsPerdido'=>LostAnimal::all()], ['imagensPerdido'=>LostImage::all()], ['imagensAchado'=>FoundImage::all()]);
         //, ['Ongs'=>Ong::all()], ['EnderecoOngs'=>EnderecoOng::all()], ['Users'=>User::all()], ['EnderecoUsers'=>EnderecoUser::all()]
     }
 
@@ -29,7 +31,7 @@ class HomeController extends Controller
      */
     public function show ($slug)
     {
-        return view('site.post-individual', ['post' => $slug]);
+        return view('site.post-individual', ['post' => $slug], );
     }
 
 

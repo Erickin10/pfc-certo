@@ -15,7 +15,6 @@ class Ong extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'id_Endereco',
         'name',
         'email',
         'description',

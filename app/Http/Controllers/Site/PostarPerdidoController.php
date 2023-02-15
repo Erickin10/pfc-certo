@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\LostAnimal;
+use App\Models\LostImage;
 use Illuminate\Http\Request;
 
 class PostarPerdidoController extends Controller{
@@ -20,8 +21,32 @@ class PostarPerdidoController extends Controller{
     public function formPerdido(Request $request){
 
         $data = $request->post();
+        $data['aproved'] = false;
 
-        if($request->hasFile('img_Animal') && $request->file('img_Animal')->isValid()){
+        $post = LostAnimal::create($data);
+        $id_Perdido = $post->getKey();
+
+        if ($request->hasFile('img_Animal')) {
+            foreach ($request->file('img_Animal') as $image) {
+                if ($image->isValid()) {
+                    $extension  = $image->extension();
+                    $imageName = $image->getClientOriginalName();
+                    $imageName = md5($image->getClientOriginalName() . strtotime("now")) . "." . $extension;
+                    $image->move(public_path('img/posts-achados'), $imageName);
+                    $name = 'img/posts-achados/' . $imageName;
+
+                    $img = [
+                        'name_Img' => $name,
+                        'id_Perdido' => $id_Perdido
+                    ];
+
+                    LostImage::create($img);
+                }
+            }
+
+        }
+
+        /*if($request->hasFile('img_Animal') && $request->file('img_Animal')->isValid()){
 
             $requestImage = $request->img_Animal;
 
@@ -35,11 +60,11 @@ class PostarPerdidoController extends Controller{
 
             $data['img_Animal'] = $name;
 
-        }
+        }*/
 
-        $data['aproved'] = false;
 
-        LostAnimal::create($data);
+
+
         return redirect()->route('site.post-feito');
 
     }

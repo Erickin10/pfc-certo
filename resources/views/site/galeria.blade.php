@@ -129,12 +129,20 @@
 
     <div class="gallery-container1" class="img img-responsive">
 
+        @php
+            use App\Models\FoundImage;
+        @endphp
+
         @foreach ($postsAchado as $post)
+
+        @php
+            {{$img = FoundImage::where([['id_Achado', 'like', $post->id]])->first();}}
+        @endphp
 
         @if ($post->aproved == true)
 
             <a href="{{route('site.galeria.achado.post-individual', ['post' => $post])}}">
-                <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}">
+                <img src="{{asset($img->name_Img)}}" alt="{{asset($img->name_Img)}}">
             </a>
 
         @endif
@@ -150,13 +158,20 @@
     <br><br><br>
 
     <div class="gallery-container2">
+        @php
+            use App\Models\LostImage;
+        @endphp
 
         @foreach ($postsPerdido as $post)
+
+        @php
+            {{$img = LostImage::where([['id_Perdido', 'like', $post->id]])->first();}}
+        @endphp
 
         @if ($post->aproved == true)
 
         <a href="{{route('site.galeria.perdido.post-individual', ['post' => $post])}}">
-            <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}">
+            <img src="{{asset($img->name_Img)}}" alt="{{asset($post->img_Animal)}}">
         </a>
 
         @endif

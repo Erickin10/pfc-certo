@@ -17,7 +17,6 @@ class FoundAnimal extends Model {
         'age_Animal',
         'gender_Animal',
         'size_Animal',
-        'img_Animal',
         'id_Usuario',
         'post_Description',
         //'bounty_Animal',

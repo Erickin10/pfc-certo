@@ -17,7 +17,6 @@ class User extends Authenticatable {
      * @var array<int, string>
      */
     protected $fillable = [
-        'id_Endereco',
         'name',
         'email',
         'phone',
@@ -44,8 +43,8 @@ class User extends Authenticatable {
         'email_verified_at' => 'datetime',
     ];
 
-    public function endereco(){
+    /*public function endereco(){
         return $this->belongTo(Endereco::class);
-    }
+    }*/
 
 }

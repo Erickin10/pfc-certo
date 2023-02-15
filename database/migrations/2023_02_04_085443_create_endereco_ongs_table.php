@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
+            $table->foreignId('id_Ong')->references('id')->on('ongs');
             $table->string('estado');
             $table->string('cidade');
             $table->string('bairro');

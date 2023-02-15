@@ -1791,10 +1791,10 @@ left: 25.5%;
     }
 
     .cardverpost-body{
-        padding-top: 5%;
+        padding-top: 0%;
         font-weight: inherit;
         padding-left: 5%;
-        padding-bottom: 5%;
+        padding-bottom: 25%;
     }
 
     .verpost-footer{
@@ -2047,13 +2047,12 @@ section .section-title {
 }
 
 footer{
-    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     background: #7fab7c;
     height: auto;
-    width: 100vw;
+    width: 97.9vw;
     font-family: "Open Sans";
     padding-top: 40px;
     color: #fff;
@@ -2358,7 +2357,7 @@ footer{
   }
 
   .slick_slide-individual img{
-    height: 441px;
+    height: 389px;
     width: -webkit-fill-available;
     position: relative;
     clear: both;
@@ -2367,3 +2366,238 @@ footer{
     border-radius: 20%;
 
   }
+
+
+
+  .botao-delete-aprovado{
+    position: absolute;
+    width: 50%;
+    font: inherit;
+    margin-top: 22px;
+    color: #fff;
+    background: #ff0000;
+    border: none;
+    padding: 7px;
+    border-radius: 6px;
+    border-bottom: 4px solid #ff0000;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    right: 70%;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    top: -250%;
+
+}
+
+.botao-delete-adm{
+    position: absolute;
+    width: 50%;
+    font: inherit;
+    margin-top: 22px;
+    color: #fff;
+    background: #ff0000;
+    border: none;
+    padding: 7px;
+    border-radius: 6px;
+    border-bottom: 4px solid #ff0000;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    right: 70%;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    top: -340%;
+
+}
+
+.botao-delete{
+    position: absolute;
+    width: 50%;
+    font: inherit;
+    margin-top: 22px;
+    color: #fff;
+    background: #ff0000;
+    border: none;
+    padding: 7px;
+    border-radius: 6px;
+    border-bottom: 4px solid #ff0000;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    right: 70%;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    top: 20%;
+
+}
+
+.botao-delete:hover{
+    background: #9a0000;
+    border-bottom: 4px solid #9a0000;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+    }
+.botao-aprovar{
+    position: relative;
+    width: 50%;
+    font: inherit;
+    color: #fff;
+    background: #4d9619;
+    border: none;
+    border-radius: 6px;
+    padding: 7px;
+    right: 20%;
+    border-bottom: 4px solid #4d9619;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    margin-top: 100px;
+}
+
+.botao-aprovar:hover{
+    position: relative;
+    width: 50%;
+    font: inherit;
+    color: #fff;
+    background: #4d9619;
+    border: none;
+    border-radius: 6px;
+    padding: 7px;
+    right: 20%;
+    border-bottom: 4px solid #4d9619;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    margin-top: 100px;
+}
+
+.botao-aprovar:hover{
+    background: #3b7016;
+    border-bottom: 4px solid #3b7016;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+    }
+
+.voltar-btn {
+    position: absolute;
+    width: 30%;
+    font: inherit;
+    color: #fff;
+    background: #7fab7c;
+    border: none;
+    border-radius: 6px;
+    padding: 7px;
+    right: 80%;
+    border-bottom: 4px solid #7fab7c;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    margin-top: 15px;
+    text-align: center;
+    top: -735%;
+}
+
+.voltar-btn-cliente {
+    position: absolute;
+    width: 30%;
+    font: inherit;
+    color: #fff;
+    background: #7fab7c;
+    border: none;
+    border-radius: 6px;
+    padding: 7px;
+    right: 80%;
+    border-bottom: 4px solid #7fab7c;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    margin-top: 15px;
+    text-align: center;
+    top: -545%;
+}
+
+.voltar-btn-adm {
+    position: absolute;
+    width: 30%;
+    font: inherit;
+    color: #fff;
+    background: #7fab7c;
+    border: none;
+    border-radius: 6px;
+    padding: 7px;
+    right: 80%;
+    border-bottom: 4px solid #7fab7c;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+    margin-top: 15px;
+    text-align: center;
+    top: -580%;
+}
+
+.botao-editar-aprovado {
+    position: absolute;
+   width: 30%;
+   font: inherit;
+   color: #fff;
+   background: #7fab7c;
+   border: none;
+   border-radius: 6px;
+   padding: 7px;
+   right: 80%;
+   border-bottom: 4px solid #7fab7c;
+   transition: all .2s ease;
+   outline: none;
+   text-transform: uppercase;
+   font-weight: 500;
+   text-decoration: none;
+   box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+   margin-top: 15px;
+   text-align: center;
+   top: -475%;
+
+}
+
+.botao-editar-aprovado:hover {
+   position: absolute;
+  width: 30%;
+  font: inherit;
+  color: #fff;
+  background: #589454;
+  border: none;
+  border-radius: 6px;
+  padding: 7px;
+  right: 80%;
+  border-bottom: 4px solid #589454;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
+  margin-top: 15px;
+  text-align: center;
+  top: -475%;
+
+}

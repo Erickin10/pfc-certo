@@ -1,98 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
+@extends('layouts.site')
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-
-        <!--Fonte-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-        <!--Bootstrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
-
-        <!--Titulo-->
-        <title> Post Individual </title>
-
-    </head>
-
-    <body>
-
-        <header>
-        <!-- Barra de navegação -->
-        <nav class="navbar fixed-top">
-
-            <div class="container-fluid">
-
-            <a class="navbar-brand" href="{{route('site.home')}}">
-                <img src="{{asset('imagens/logzin.png')}}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                SOCÃES&GATOS
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="offcanvas offcanvas-end" tabhome="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
-
-                <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasLightNavbarLabel">SOCÃES&GATOS </h5>
-                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-
-                <!-- Menu da bara de navegação -->
-                <div class="offcanvas-body">
-
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{route('site.home')}}">Home</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item" href="{{route('site.perfil')}}">Meu Perfil</a></li>
-                          <li><a class="dropdown-item" href="{{route('site.perfil.meus-posts')}}">Meus posts</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Postar</a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="{{route('site.postar-achado')}}">Achado</a></li>
-                            <li><a class="dropdown-item" href="{{route('site.postar-perdido')}}">Perdido</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{route('site.galeria')}}">Achados e perdidos</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}">
-                            Logout
-                        </a>
-                    </li>
-
-                </ul>
-
-                <!-- Barra de pesquisa da barra de navegação -->
-                <form class="d-flex mt-3" role="search">
-
-                    <input class="form-control me-2" type="Procure uma ONG" placeholder="Procure uma ONG" aria-label="Procure uma ONG">
-                    <button class="btn btn-success" type="submit">Procurar</button>
-
-                </form>
-                </div>
-            </div>
-            </div>
-        </nav>
-        </header>
+@section('title', 'Post Perdido')
+@section('content')
 
         <!-- ==============================================
         Hero
@@ -136,7 +45,7 @@
                     <strong>Observaçoes: </strong>{{$post->post_Description}}<br><br>
                 </div>
                 <div class="verpost-footer">
-                    <a href="{{route('site.galeria')}}" class="verpost-btn btn">ok</a>
+
 
                     {{-- ADM COM POST NAO APROVADO --}}
                     @if (Auth::user()->role == 'adm' && $post->aproved == false)
@@ -145,39 +54,60 @@
                             @csrf
                             @method ('DELETE')
 
-                            <button type="submit" class="btn btn-danger delete-btn">deletar</button>
+                            <button type="submit" class="botao-delete">deletar</button>
                         </form>
 
                         <form action="{{route('site.post-perdido.aprovar', ['id'=> $post->id])}}" method="POST">
                             @csrf
                             @method('PATCH')
 
-                            <button type="submit">aprovar</button>
+                            <button class="botao-aprovar" type="submit">aprovar</button>
                         </form>
 
                     {{-- CLIENTE COM POST DELE --}}
                     @elseif ($post->id_Usuario == Auth::user()->id)
 
+                    {{-- VOLTAR --}}
+                    <a href="{{route('site.galeria')}}" class="voltar-btn">voltar</a>
+
                     <form action="{{route('site.post-perdido.deletar', ['id'=> $post->id])}}" method="POST">
                         @csrf
                         @method ('DELETE')
 
-                        <button type="submit" class="btn btn-danger delete-btn">deletar</button>
+                        <button type="submit" class="botao-delete-aprovado">deletar</button>
                     </form>
 
-                    <a href="{{route('site.editar-perdido', ['id'=> $post->id])}}" class="btn btn-info edit-btn">
+                    <a href="{{route('site.editar-perdido', ['id'=> $post->id])}}" class="botao-editar-aprovado">
                         Editar
                     </a>
 
-                    {{-- ADM COM POST JA APROVADO --}}
-                    @elseif (Auth::user()->role == 'adm' && $post->aproved == true )
+                    {{-- ADM COM POST DELE MESMO JA APROVADO  --}}
+                    @elseif (Auth::user()->role == 'adm' && $post->aproved == true && $post->id_Usuario == Auth::user()->id)
 
                         <form action="{{route('site.post-perdido.deletar', ['id'=> $post->id])}}" method="POST">
                             @csrf
                             @method ('DELETE')
 
-                            <button type="submit" class="btn btn-danger delete-btn">deletar</button>
+                            <button type="submit" class="botao-delete">deletar</button>
                         </form>
+
+                    {{-- ADM COM POST JA APROVADO --}}
+                    @elseif (Auth::user()->role == 'adm' && $post->aproved == true && $post->id_Usuario != Auth::user()->id)
+
+                        <form action="{{route('site.post-perdido.deletar', ['id'=> $post->id])}}" method="POST">
+                            @csrf
+                            @method ('DELETE')
+
+                            <button type="submit" class="botao-delete-adm">deletar</button>
+                        </form>
+
+                        {{-- VOLTAR --}}
+                        <a href="{{route('site.galeria')}}" class="voltar-btn-adm">voltar</a>
+
+                    @elseif ($post->id_Usuario != Auth::user()->id && $post->aproved == true)
+
+                    {{-- VOLTAR --}}
+                    <a href="{{route('site.galeria')}}" class="voltar-btn-cliente">voltar</a>
 
                     @endif
                 </div>

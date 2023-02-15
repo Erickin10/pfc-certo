@@ -137,5 +137,3 @@
         </header>
 
         @yield('content')
-
- 

@@ -80,11 +80,13 @@
 				<span class="select-fotopost" role="button" >Busque</span>
 			</span>
 			<span class="on-drop-fotopost">Solte as imagens aqui</span>
-      <input name="img_Animal[]" type="file" class="file-fotopost" multiple="multiple" />
+
+        <input name="img_Animal[]" type="file" class="file-fotopost" multiple="multiple" />
     	</div>
 
 	    <!-- IMAGE PREVIEW CONTAINER -->
     	<div class="container"></div>
+
     </div>
 
     <script src="{{asset('app.js')}}"></script>
@@ -133,4 +135,5 @@
 <script src="{{asset('js/progessbar.min.js')}}"></script>
 
 <script src="{{asset('js/postar.js')}}"></script>
+
 @endsection

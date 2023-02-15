@@ -152,4 +152,61 @@ use App\Models\User;
 
     <script src="js/postar.js"></script>
 
+    <div style="width: 100vw;">
+        <footer class="bg-light text-center text-white" style="width: 100vw; color: #0082c;">
+
+        <!-- Sites-->
+        <div class="text-center p-3" style="background-color: #7fab7cc4">
+            <section id="section" class="mb-4">
+
+            <!-- Facebook -->
+            <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #3b5998;"
+                href="https://www.facebook.com/profile.php?id=100089471120038"
+                role="button"
+            >
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Google -->
+            <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #dd4b39;"
+                href="#!"
+                role="button"
+            >
+                <i class="fab fa-google"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #ac2bac;"
+                href="https://www.instagram.com/socaes.gatos/"
+                role="button"
+                >
+                <i class="fab fa-instagram"></i>
+                </a>
+
+            <!-- Linkedin -->
+            <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #0082ca;"
+                href="#!"
+                role="button"
+            >
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            </section>
+
+            <!-- Copyright -->
+            © 2023 Copyright:
+            <a class="text-white" href="home.html">SOCÃES&GATOS</a>
+        </div>
+        </footer>
+    </div>
+    </html>
+
 @endsection

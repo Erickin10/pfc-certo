@@ -103,20 +103,21 @@ class PostarAchadoController extends Controller{
     {
 
         $data = FoundAnimal::findOrFail($id);
+        $imageP = FoundImage::where([['id_Achado', 'like', $data->id]])->get();
 
-        if($request->hasFile('img_Animal') && $request->file('img_Animal')->isValid()){
+        if ($request->hasFile('img_Animal')) {
+            foreach ($request->file('img_Animal') as $key => $image) {
+                if ($image->isValid()) {
+                    $extension  = $image->extension();
+                    $imageName = $image->getClientOriginalName();
+                    $imageName = md5($image->getClientOriginalName() . strtotime("now")) . "." . $extension;
+                    $image->move(public_path('img/posts-achados'), $imageName);
+                    $name = 'img/posts-achados/' . $imageName;
 
-            $requestImage = $request->img_Animal;
-
-            $extension  = $requestImage->extension();
-
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
-
-            $requestImage->move(public_path('img/posts-perdidos'), $imageName);
-
-            $name = 'img/posts-perdidos/' . $imageName;
-
-            $data['img_Animal'] = $name;
+                    $lostImage = $imageP[$key];
+                    $lostImage->update(['name_Img' => $name]);
+                }
+            }
 
         }
 
@@ -128,7 +129,6 @@ class PostarAchadoController extends Controller{
             'age_Animal' => $request->age_Animal,
             'gender_Animal' => $request->gender_Animal,
             'size_Animal' => $request->size_Animal,
-            'img_Animal' => $data['img_Animal'],
             'local_Found_Animal' => $request->local_Found_Animal,
             'post_Description' => $request->post_Description,
             'local_Animal' => $request->local_Animal,

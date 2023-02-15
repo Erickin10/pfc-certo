@@ -32,8 +32,8 @@ class PostarPerdidoController extends Controller{
                     $extension  = $image->extension();
                     $imageName = $image->getClientOriginalName();
                     $imageName = md5($image->getClientOriginalName() . strtotime("now")) . "." . $extension;
-                    $image->move(public_path('img/posts-achados'), $imageName);
-                    $name = 'img/posts-achados/' . $imageName;
+                    $image->move(public_path('img/posts-perdidos'), $imageName);
+                    $name = 'img/posts-perdidos/' . $imageName;
 
                     $img = [
                         'name_Img' => $name,
@@ -102,8 +102,8 @@ class PostarPerdidoController extends Controller{
                     $extension  = $image->extension();
                     $imageName = $image->getClientOriginalName();
                     $imageName = md5($image->getClientOriginalName() . strtotime("now")) . "." . $extension;
-                    $image->move(public_path('img/posts-achados'), $imageName);
-                    $name = 'img/posts-achados/' . $imageName;
+                    $image->move(public_path('img/posts-perdidos'), $imageName);
+                    $name = 'img/posts-perdidos/' . $imageName;
 
                     $lostImage = $imageP[$key];
                     $lostImage->update(['name_Img' => $name]);

@@ -51,11 +51,11 @@
                     @if (Auth::user()->role == 'adm' && $post->aproved == false)
 
                         {{-- EXCLUIR --}}
-                        <form action="{{route('site.post-achado.deletar', ['id'=> $post->id])}}" method="POST">
+                        <form id="delete-form" action="{{route('site.post-achado.deletar', ['id'=> $post->id])}}" method="POST">
                             @csrf
                             @method ('DELETE')
 
-                            <button type="submit" class="botao-delete">deletar</button>
+                            <button type="submit" class="botao-delete" onclick="confirmDelete(event)">deletar</button>
                         </form>
 
                         {{-- APROVAR --}}
@@ -73,11 +73,11 @@
                     <a href="{{route('site.galeria')}}" class="voltar-btn">voltar</a>
 
                     {{-- EXCLUIR --}}
-                    <form action="{{route('site.post-achado.deletar', ['id'=> $post->id])}}" method="POST">
+                    <form id="delete-form" action="{{route('site.post-achado.deletar', ['id'=> $post->id])}}" method="POST">
                         @csrf
                         @method ('DELETE')
 
-                        <button type="submit" class="botao-delete-aprovado">deletar</button>
+                        <button type="submit" class="botao-delete-aprovado" onclick="confirmDelete(event)">deletar</button>
                     </form>
 
                     {{-- EDITAR --}}
@@ -88,27 +88,29 @@
                     {{-- ADM COM POST DELE MESMO JA APROVADO  --}}
                     @elseif (Auth::user()->role == 'adm' && $post->aproved == true && $post->id_Usuario == Auth::user()->id)
 
-                        {{-- EXCLUIR --}}
-                        <form action="{{route('site.post-achado.deletar', ['id'=> $post->id])}}" method="POST">
+                        <form id="delete-form" action="{{route('site.post-achado.deletar', ['id'=> $post->id])}}" method="POST">
                             @csrf
                             @method ('DELETE')
 
-                            <button type="submit" class="botao-delete">deletar</button>
+                            {{-- EXCLUIR --}}
+                            <button type="submit" class="botao-delete" onclick="confirmDelete(event)">deletar</button>
                         </form>
 
                     {{-- ADM COM POST JA APROVADO --}}
                     @elseif (Auth::user()->role == 'adm' && $post->aproved == true && $post->id_Usuario != Auth::user()->id)
 
-                        <form action="{{route('site.post-perdido.deletar', ['id'=> $post->id])}}" method="POST">
+                        <form id="delete-form" action="{{route('site.post-perdido.deletar', ['id'=> $post->id])}}" method="POST">
                             @csrf
                             @method ('DELETE')
 
-                            <button type="submit" class="botao-delete-adm">deletar</button>
+                            {{-- EXCLUIR --}}
+                            <button type="submit" class="botao-delete-adm"  onclick="confirmDelete(event)">deletar</button>
                         </form>
 
                         {{-- VOLTAR --}}
                         <a href="{{route('site.galeria')}}" class="voltar-btn-adm">voltar</a>
 
+                        {{-- CLIENTE COM POST DOS OUTROS --}}
                         @elseif ($post->id_Usuario != Auth::user()->id && $post->aproved == true)
 
                         {{-- VOLTAR --}}

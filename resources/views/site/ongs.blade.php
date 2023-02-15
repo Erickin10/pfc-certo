@@ -5,6 +5,7 @@
 
 @php
 use App\Models\Ong;
+use App\Models\EnderecoOng;
 use App\Models\User;
 @endphp
 
@@ -13,25 +14,29 @@ use App\Models\User;
         <div class="container">
             <h5 class="section-title h1">ONGs</h5>
             <div class="row">
+
+
+
                 <!-- Team member -->
                 @foreach ($endereco_ong as $endereco)
+
+                @php
+                    {{$ongNow = Ong::where([['id', 'like', $endereco->id_Ong]])->first();}}
+                @endphp
 
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="image-flip" >
                         <div class="mainflip flip-0">
 
-                            @php
-                                {{$ong = Ong::where([['id_Endereco', 'like', $endereco->id]])->first();}}
-                            @endphp
 
-                            @if (Auth::user()->role == 'adm' && $ong->aproved == false)
+                            @if (Auth::user()->role == 'adm' && $ongNow->aproved == false)
 
                                 <div class="frontside">
                                     <div class="card">
                                         <div class="card-body text-center">
-                                            <h4 class="card-title">{{$ong->name}}</h4>
+                                            <h4 class="card-title">{{$ongNow->name}}</h4>
                                             <p class="card-text">
-                                                {{$ong->description}}
+                                                {{$ongNow->description}}
                                             </p>
                                             <a href="#" class="btn btn-primary btn-sm">
                                                 <i class="fa fa-plus"></i>
@@ -42,7 +47,7 @@ use App\Models\User;
                                 <div class="backside">
                                     <div class="card">
                                         <div class="card-body text-justify mt-4">
-                                            <h4 class="card-title">{{$ong->name}}</h4>
+                                            <h4 class="card-title">{{$ongNow->name}}</h4>
 
                                             <p class="card-text">
                                                 <strong>Estado: </strong>{{$endereco->estado}}
@@ -50,22 +55,22 @@ use App\Models\User;
                                                 <strong>Bairro: </strong>{{$endereco->bairro}}<br>
                                                 <strong>Rua: </strong>{{$endereco->rua}}<br>
                                                 <strong>Numero: </strong>{{$endereco->numero}}<br>
-                                                <strong>Telefone: </strong>{{$ong->phone}}<br>
-                                                <strong>Email: </strong>{{$ong->email}}<br>
-                                                <strong>Cnpj: </strong>{{$ong->cnpj}}<br>
+                                                <strong>Telefone: </strong>{{$ongNow->phone}}<br>
+                                                <strong>Email: </strong>{{$ongNow->email}}<br>
+                                                <strong>Cnpj: </strong>{{$ongNow->cnpj}}<br>
                                             </p>
-                                            <form action="{{route('site.ong.deletar', ['id'=> $ong->id])}}" method="POST">
+                                            <form id="delete-form" action="{{route('site.ong.deletar', ['id'=> $endereco->id])}}" method="POST">
                                                 @csrf
                                                 @method ('DELETE')
 
-                                                <button type="submit" class="btn btn-danger delete-btn">deletar</button>
+                                                <button type="submit" class="btn btn-danger delete-btn" onclick="confirmDelete(event)">deletar</button>
                                             </form>
 
-                                            <form action="{{route('site.ong.aprovar', ['id'=> $ong->id])}}" method="POST">
+                                            <form action="{{route('site.ong.aprovar', ['id'=> $ongNow->id])}}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
 
-                                                <button type="submit">aprovar</button>
+                                                <button type="submit" class="botao-aprovar-ong">aprovar</button>
                                             </form>
                                         </div>
                                     </div>
@@ -73,18 +78,18 @@ use App\Models\User;
 
 
 
-                            @elseif(Auth::user()->role == 'cliente' && $ong->aproved == false)
+                            @elseif(Auth::user()->role == 'cliente' && $ongNow->aproved == false)
 
 
 
-                            @elseif ($ong->aproved == true)
+                            @elseif ($ongNow->aproved == true)
 
                             <div class="frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                        <h4 class="card-title">{{$ong->name}}</h4>
+                                        <h4 class="card-title">{{$ongNow->name}}</h4>
                                         <p class="card-text">
-                                            {{$ong->description}}
+                                            {{$ongNow->description}}
                                         </p>
                                         <a href="#" class="btn btn-primary btn-sm">
                                             <i class="fa fa-plus"></i>
@@ -92,10 +97,12 @@ use App\Models\User;
                                     </div>
                                 </div>
                             </div>
+
+
                             <div class="backside">
                                 <div class="card">
                                     <div class="card-body text-justify mt-4">
-                                        <h4 class="card-title">{{$ong->name}}</h4>
+                                        <h4 class="card-title">{{$ongNow->name}}</h4>
 
                                         <p class="card-text">
                                             <strong>Estado: </strong>{{$endereco->estado}}
@@ -103,14 +110,21 @@ use App\Models\User;
                                             <strong>Bairro: </strong>{{$endereco->bairro}}<br>
                                             <strong>Rua: </strong>{{$endereco->rua}}<br>
                                             <strong>Numero: </strong>{{$endereco->numero}}<br>
-                                            <strong>Telefone: </strong>{{$ong->phone}}<br>
-                                            <strong>Email: </strong>{{$ong->email}}<br>
-                                            <strong>Cnpj: </strong>{{$ong->cnpj}}<br>
+                                            <strong>Telefone: </strong>{{$ongNow->phone}}<br>
+                                            <strong>Email: </strong>{{$ongNow->email}}<br>
+                                            <strong>Cnpj: </strong>{{$ongNow->cnpj}}<br>
                                         </p>
                                         @if (Auth::user()->role == 'adm')
 
-                                        <a href="{{route('site.ong.editar', ['id'=> $endereco->id])}}"
-                                        class="btn btn-info edit-btn">
+                                        <form id="delete-form" action="{{route('site.ong.deletar', ['id'=> $ongNow->id])}}" method="POST">
+                                            @csrf
+                                            @method ('DELETE')
+
+                                            <button type="submit" style="margin: 3px" class="btn btn-danger delete-btn" onclick="confirmDelete(event)">deletar</button>
+                                        </form>
+
+                                        <a href="{{route('site.ong.editar', ['id'=> $ongNow->id])}}"
+                                        class="btn btn-info edit-btn" style="margin: 3px">
                                             Editar
                                         </a>
 
@@ -149,7 +163,7 @@ use App\Models\User;
 
     <!--Progress Bar-->
     <script src="js/progessbar.min.js"></script>
-
+    <script src="{{asset('js/custom.js')}}"></script>
     <script src="js/postar.js"></script>
 
     <div style="width: 100vw;">

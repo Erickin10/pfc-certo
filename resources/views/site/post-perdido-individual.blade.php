@@ -54,7 +54,7 @@
                             @csrf
                             @method ('DELETE')
 
-                            <button type="submit" class="botao-delete">deletar</button>
+                            <button type="submit" class="botao-delete" onclick="confirmDelete(event)">deletar</button>
                         </form>
 
                         <form action="{{route('site.post-perdido.aprovar', ['id'=> $post->id])}}" method="POST">
@@ -74,9 +74,11 @@
                         @csrf
                         @method ('DELETE')
 
-                        <button type="submit" class="botao-delete-aprovado">deletar</button>
+                        {{-- DELETAR --}}
+                        <button type="submit" class="botao-delete-aprovado" onclick="confirmDelete(event)">deletar</button>
                     </form>
 
+                    {{-- EDITAR --}}
                     <a href="{{route('site.editar-perdido', ['id'=> $post->id])}}" class="botao-editar-aprovado">
                         Editar
                     </a>
@@ -88,7 +90,7 @@
                             @csrf
                             @method ('DELETE')
 
-                            <button type="submit" class="botao-delete">deletar</button>
+                            <button type="submit" class="botao-delete" onclick="confirmDelete(event)">deletar</button>
                         </form>
 
                     {{-- ADM COM POST JA APROVADO --}}
@@ -98,12 +100,13 @@
                             @csrf
                             @method ('DELETE')
 
-                            <button type="submit" class="botao-delete-adm">deletar</button>
+                            <button type="submit" class="botao-delete-adm" onclick="confirmDelete(event)">deletar</button>
                         </form>
 
                         {{-- VOLTAR --}}
                         <a href="{{route('site.galeria')}}" class="voltar-btn-adm">voltar</a>
 
+                    {{-- CLIENTE COM POST DOS OUTROS --}}
                     @elseif ($post->id_Usuario != Auth::user()->id && $post->aproved == true)
 
                     {{-- VOLTAR --}}

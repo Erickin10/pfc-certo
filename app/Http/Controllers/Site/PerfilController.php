@@ -65,6 +65,10 @@ class PerfilController extends Controller
     public function update(Request $request, $enderecoUser_id)
     {
 
+        $request->validate([
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users']
+        ]);
+
         $endereco = EnderecoUser::findOrFail($enderecoUser_id);
         $endereco->update([
             'cep' => $request->cep,

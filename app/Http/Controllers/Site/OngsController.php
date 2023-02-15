@@ -98,9 +98,9 @@ class OngsController extends Controller
      */
     public function edit($id)
     {
-        $endereco_ong=EnderecoOng::findOrFail($id);
+        $ongEdit=Ong::findOrFail($id);
 
-        return view('site.editar-ong',['endereco_ong'=>$endereco_ong], ['ong'=>Ong::all()]);
+        return view('site.editar-ong',['endereco_ong'=>EnderecoOng::all()], ['ong'=>$ongEdit]);
     }
 
 
@@ -114,7 +114,7 @@ class OngsController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $request->validate([
+        $request->validate([
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users']
         ]);
 
@@ -125,7 +125,8 @@ class OngsController extends Controller
             'bairro' => $request->bairro,
             'cidade' => $request->cidade,
             'complemento' => $request->complemento,
-            'numero' => $request->numero
+            'numero' => $request->numero,
+            'estado' => $request->estado
         ]);
 
         $ong = Ong::findOrFail($request->idOng);
@@ -160,15 +161,15 @@ class OngsController extends Controller
 
 
 
-        $ong = Ong::find($id);
+        $enderecoOng = EnderecoOng::find($id);
 
-        $endereco_ong = $ong->id_Endereco;
+        $ongNow = $enderecoOng->id;
 
-        $endereco = EnderecoOng::where('id', $endereco_ong)->first();
+        $ong = Ong::where('id', $ongNow)->first();
 
-
+        $enderecoOng->delete();
         $ong->delete();
-        $endereco->delete();
+
 
     return redirect()->route('site.ong')->with('success', 'Ong excluída com sucesso.');
     }

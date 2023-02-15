@@ -19,3 +19,10 @@ $('.slick_slide').slick({
     prevArrow:'<i class="fas fa-angle-left  left_arrow"></i>',
     nextArrow:'<i class="fas fa-angle-right  right_arrow"></i>',
   });
+
+  function confirmDelete(event) {
+    event.preventDefault();
+    if (confirm('Tem certeza que deseja excluir este post?')) {
+        document.getElementById('delete-form').submit();
+    }
+}

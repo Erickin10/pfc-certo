@@ -37,10 +37,17 @@ background-size: cover;">
 
         <div class= "form-cad">
 
+
+
+
             @php
                 use App\Models\Ong;
+                use App\Models\EnderecoOng;
 
-                {{$ong = Ong::where([['id_Endereco', 'like', $endereco_ong->id]])->first();}}
+
+                
+                {{$ongNow = Ong::where([['id', 'like', $ong->id]])->first();}}
+                {{$endereco_ong = EnderecoOng::where([['id_Ong', 'like', $ong->id]])->first();}}
 
             @endphp
 

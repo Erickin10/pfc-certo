@@ -2462,16 +2462,16 @@ footer{
     margin-top: 100px;
 }
 
-.botao-aprovar:hover{
+.botao-aprovar-ong{
     position: relative;
-    width: 50%;
+    width: 28%;
     font: inherit;
     color: #fff;
     background: #4d9619;
     border: none;
     border-radius: 6px;
-    padding: 7px;
-    right: 20%;
+    padding: 5px;
+    right: 0%;
     border-bottom: 4px solid #4d9619;
     transition: all .2s ease;
     outline: none;
@@ -2479,7 +2479,7 @@ footer{
     font-weight: 500;
     text-decoration: none;
     box-shadow: 0 0 9px 1px rgb(0 0 0 / 40%);
-    margin-top: 100px;
+    margin-top: 5px;
 }
 
 .botao-aprovar:hover{
